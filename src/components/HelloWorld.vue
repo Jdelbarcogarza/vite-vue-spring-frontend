@@ -38,7 +38,7 @@ const submitHandler = async (e: Event) => {
   console.log('asi esta la fecha',birthDate.value)
 
   // make post request
-  axios.post("127.0.0.1:8080/api/v1/student", {
+  axios.post("http://localhost:8080/api/v1/student", {
      name: studentName.value,
      email: studentEmail.value,
      dob: birthDate.value
@@ -49,7 +49,7 @@ const submitHandler = async (e: Event) => {
 
 const getStudentHandler = async (e: Event) => {
 
-  const studentList = axios.get('127.0.0.1:8080/api/v1/student')
+  const studentList = axios.get('http://localhost:8080/api/v1/student')
 
   console.log('grupo de students:', studentList)
 
